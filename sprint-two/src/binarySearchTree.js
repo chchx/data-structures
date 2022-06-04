@@ -1,13 +1,4 @@
 var BinarySearchTree = function(value) {
-<<<<<<< Updated upstream
-  this.root = null;
-};
-
-var treeNode = function(value) {
-  this.value = value;
-  this.left = null;
-  this.right = null;
-=======
   // this = Object.create(BinarSearchTree.prototype)
   var obj = {};
 
@@ -16,7 +7,6 @@ var treeNode = function(value) {
   obj.right = null;
   extend(obj, searchMethod);
   return obj;
->>>>>>> Stashed changes
 };
 
 var extend = function(to, from) {
@@ -32,22 +22,6 @@ var extend = function(to, from) {
 //if it's bigger, check the right side,
 //if the right side is null, we place here
 //if not, repeate
-<<<<<<< Updated upstream
-BinarySearchTree.prototype.insert = function(value) {
-  var node = new treeNode(value);
-  if (this.root === null) {
-    this.root = node;
-    return this;
-  }
-
-  var current = this.root;
-  while (current) {
-    if (current.value === value) { return undefined; }
-    if (current.value < value) {
-      if (current.right === null) {
-        current.right = node;
-        return this;
-=======
 var searchMethod = {};
 
 searchMethod.insert = function(value) {
@@ -68,7 +42,6 @@ searchMethod.insert = function(value) {
       if (node.value > obj.value) {
         obj.right = node;
         return;
->>>>>>> Stashed changes
       }
       current = current.right;
     } else {
@@ -78,13 +51,8 @@ searchMethod.insert = function(value) {
       }
       current = current.left;
     }
-<<<<<<< Updated upstream
-  }
-};
-=======
   };
   placeNode(this);
->>>>>>> Stashed changes
 
 };
 searchMethod.contains = function(value) {
@@ -120,20 +88,7 @@ searchMethod.depthFirstLog = function(value) {
 
 };
 
-<<<<<<< Updated upstream
-var binarySearchTree = new BinarySearchTree();
-binarySearchTree.insert(2);
-binarySearchTree.insert(3);
-binarySearchTree.insert(7);
-binarySearchTree.insert(6);
-console.log(binarySearchTree);
-
-/*
- * Complexity: What is the time complexity of the above functions?
- */
-=======
 var binarySearchTree = BinarySearchTree(5);
->>>>>>> Stashed changes
 
 binarySearchTree.insert(2);
 binarySearchTree.insert(3);
@@ -145,21 +100,6 @@ console.log(binarySearchTree);
 * Complexity: What is the time complexity of the above functions?
 */
 
-<<<<<<< Updated upstream
-// 3rd item - 10
-// BinarySearchTree = {
-//  value: 8,
-//  left: {
-//    value: 3,
-//    left: null,
-//    right: null
-//  },
-//  right: {
-//    value: 10,
-//    left: null,
-//    right: null
-// }
-=======
 // {
 //   value: 5,
 //   left: {
@@ -217,4 +157,3 @@ console.log(binarySearchTree);
 //   }
 // };
 // recurse(this);
->>>>>>> Stashed changes
