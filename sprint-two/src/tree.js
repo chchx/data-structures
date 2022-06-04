@@ -6,7 +6,7 @@
 // ]}
 
 var Tree = function(value) {
-  var newTree = {};
+  var newTree = {}; //this is a node
   newTree.value = value;
   newTree.children = []; // fix me
   _.extend(newTree, treeMethods);
@@ -41,8 +41,6 @@ treeMethods.contains = function(target) {
   return elementInTree.includes(target);
 
 };
-
-
 
 /*
  * Complexity: What is the time complexity of the above functions?
