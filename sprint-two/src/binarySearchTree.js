@@ -5,15 +5,10 @@ var BinarySearchTree = function(value) {
   obj.value = value;
   obj.left = null;
   obj.right = null;
-  extend(obj, searchMethod);
+  _.extend(obj, searchMethod);
   return obj;
 };
 
-var extend = function(to, from) {
-  for (var key in from) {
-    to[key] = from[key];
-  }
-};
 //insert
 //create a new node
 //initialize, starting at this node and check its root
@@ -43,13 +38,10 @@ searchMethod.insert = function(value) {
         obj.right = node;
         return;
       }
-      current = current.right;
     } else {
-      if (current.left === null) {
-        current.left = node;
-        return this;
+      if (node.value > obj.value) {
+        placeNode(obj.right);
       }
-      current = current.left;
     }
   };
   placeNode(this);
